@@ -14,7 +14,6 @@
             padding: 20px;
         }
 
-        /* Calculator Container */
         .calculator {
             background: #2a2a3e;
             border-radius: 16px;
@@ -24,7 +23,7 @@
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
         }
 
-        /* Display Section */
+
         .display {
             background: #3d3d5c;
             border-radius: 12px;
@@ -37,7 +36,6 @@
             justify-content: flex-end;
         }
 
-        /* Expression Display */
         .expression {
             font-size: 16px;
             color: #8e8ea0;
@@ -46,7 +44,6 @@
             word-wrap: break-word;
         }
 
-        /* Result Display */
         .result {
             font-size: 36px;
             font-weight: 600;
@@ -55,14 +52,12 @@
             word-wrap: break-word;
         }
 
-        /* Button Grid */
         .buttons {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 12px;
         }
 
-        /* Base Button Styles */
         button {
             border: none;
             border-radius: 50%;
@@ -83,7 +78,6 @@
             transform: scale(0.95);
         }
 
-        /* Number Buttons - Dark Gray */
         .btn-number {
             background: #4a4a62;
             color: #ffffff;
@@ -93,7 +87,6 @@
             background: #5a5a72;
         }
 
-        /* Operator Buttons - Orange */
         .btn-operator, .btn-back {
             background: #ff9500;
             color: #ffffff;
@@ -103,7 +96,6 @@
             background: #ffaa33;
         }
 
-        /* Clear Button - Orange */
         .btn-clear {
             background: #ff9500;
             color: #ffffff;
@@ -113,7 +105,6 @@
             background: #ffaa33;
         }
 
-        /* Delete/Backspace Button - Orange */
         .btn-delete {
             background: #ff9500;
             color: #ffffff;
@@ -124,7 +115,6 @@
             background: #ffaa33;
         }
 
-        /* Equals Button - Light Gray */
         .btn-equals {
             background: #b8b8c8;
             color: #2a2a3e;
@@ -134,7 +124,6 @@
             background: #c8c8d8;
         }
 
-        /* Decimal Point Button */
         .btn-decimal {
             background: #4a4a62;
             color: #ffffff;
@@ -144,7 +133,6 @@
             background: #5a5a72;
         }
 
-        /* Grid Positioning */
         .btn-1 { 
             grid-column: 
             1; grid-row: 1;
@@ -169,23 +157,59 @@
             grid-column: 1; 
             grid-row: 2; 
         }
-        .btn-5 { grid-column: 2; grid-row: 2; }
-        .btn-6 { grid-column: 3; grid-row: 2; }
-        .btn-mult { grid-column: 4; grid-row: 2; }
+        .btn-5 {
+             grid-column: 2;
+              grid-row: 2; }
+        .btn-6 { 
+            grid-column: 3; 
+            grid-row: 2; 
+        }
+        .btn-mult { 
+            grid-column: 4; 
+            grid-row: 2; 
+        }
         .btn-delete { grid-column: 5; grid-row: 2; }
 
-        .btn-7 { grid-column: 1; grid-row: 3; }
-        .btn-8 { grid-column: 2; grid-row: 3; }
-        .btn-9 { grid-column: 3; grid-row: 3; }
-        .btn-sub { grid-column: 4; grid-row: 3; }
-        .btn-add { grid-column: 5; grid-row: 3; }
+        .btn-7 { 
+            grid-column: 1; 
+            grid-row: 3; 
+        }
+        .btn-8 { 
+            grid-column: 2; 
+            grid-row: 3; 
+        }
+        .btn-9 { 
+            grid-column: 3; 
+            grid-row: 3; 
+        }
+        .btn-sub { 
+            grid-column: 4; 
+            grid-row: 3; 
+        }
+        .btn-add { 
+            grid-column: 5; 
+            grid-row: 3; 
+        }
 
-        .btn-decimal { grid-column: 1; grid-row: 4; }
-        .btn-0 { grid-column: 2; grid-row: 4; }
-        .btn-back { grid-column: 3; grid-row: 4; }
-        .btn-equals { grid-column: 4 / 6; grid-row: 4; border-radius: 26px; width: auto; }
+        .btn-decimal { 
+            grid-column: 1; 
+            grid-row: 4; 
+        }
+        .btn-0 { 
+            grid-column: 2; 
+            grid-row: 4; 
+        }
+        .btn-back { 
+            grid-column: 3; 
+            grid-row: 4; 
+        }
+        .btn-equals { 
+            grid-column: 4 / 6; 
+            grid-row: 4; 
+            border-radius: 26px; 
+            width: auto; 
+        }
 
-        /* Responsive Design for Mobile Devices */
         @media (max-width: 480px) {
             .calculator {
                 max-width: 100%;
@@ -216,7 +240,6 @@
             }
         }
 
-        /* Extra Small Devices */
         @media (max-width: 360px) {
             .display {
                 padding: 20px 12px;
@@ -237,7 +260,6 @@
             }
         }
 
-        /* Tablet and Larger Devices */
         @media (min-width: 768px) {
             .calculator {
                 max-width: 380px;
