@@ -31,7 +31,7 @@ opBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         if (!firstOperand) return; // this prevent operator selection before first operand
         if(firstOperand) {
-            operator = btn.textContent;
+            operator = btn.dataset.op;
             isSecondOperand = true;
         }
 
