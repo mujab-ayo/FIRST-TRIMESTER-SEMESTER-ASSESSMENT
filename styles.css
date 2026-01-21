@@ -1,0 +1,251 @@
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a2e;
+            padding: 20px;
+        }
+
+        /* Calculator Container */
+        .calculator {
+            background: #2a2a3e;
+            border-radius: 16px;
+            padding: 20px;
+            width: 100%;
+            max-width: 340px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Display Section */
+        .display {
+            background: #3d3d5c;
+            border-radius: 12px;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            text-align: right;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        /* Expression Display */
+        .expression {
+            font-size: 16px;
+            color: #8e8ea0;
+            margin-bottom: 5px;
+            min-height: 20px;
+            word-wrap: break-word;
+        }
+
+        /* Result Display */
+        .result {
+            font-size: 36px;
+            font-weight: 600;
+            color: #ffffff;
+            min-height: 40px;
+            word-wrap: break-word;
+        }
+
+        /* Button Grid */
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        /* Base Button Styles */
+        button {
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 0;
+            width: 52px;
+            height: 52px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Number Buttons - Dark Gray */
+        .btn-number {
+            background: #4a4a62;
+            color: #ffffff;
+        }
+
+        .btn-number:hover {
+            background: #5a5a72;
+        }
+
+        /* Operator Buttons - Orange */
+        .btn-operator, .btn-back {
+            background: #ff9500;
+            color: #ffffff;
+        }
+
+        .btn-operator:hover, .btn-back:hover {
+            background: #ffaa33;
+        }
+
+        /* Clear Button - Orange */
+        .btn-clear {
+            background: #ff9500;
+            color: #ffffff;
+        }
+
+        .btn-clear:hover {
+            background: #ffaa33;
+        }
+
+        /* Delete/Backspace Button - Orange */
+        .btn-delete {
+            background: #ff9500;
+            color: #ffffff;
+            font-size: 18px;
+        }
+
+        .btn-delete:hover {
+            background: #ffaa33;
+        }
+
+        /* Equals Button - Light Gray */
+        .btn-equals {
+            background: #b8b8c8;
+            color: #2a2a3e;
+        }
+
+        .btn-equals:hover {
+            background: #c8c8d8;
+        }
+
+        /* Decimal Point Button */
+        .btn-decimal {
+            background: #4a4a62;
+            color: #ffffff;
+        }
+
+        .btn-decimal:hover {
+            background: #5a5a72;
+        }
+
+        /* Grid Positioning */
+        .btn-1 { 
+            grid-column: 
+            1; grid-row: 1;
+         }
+        .btn-2 { 
+            grid-column: 2; 
+            grid-row: 1; 
+        }
+        .btn-3 {
+             grid-column: 3; 
+             grid-row: 1; 
+            }
+        .btn-div { 
+            grid-column: 4; 
+            grid-row: 1; 
+        }
+        .btn-clear { 
+            grid-column: 5; 
+            grid-row: 1; 
+        }
+        .btn-4 { 
+            grid-column: 1; 
+            grid-row: 2; 
+        }
+        .btn-5 { grid-column: 2; grid-row: 2; }
+        .btn-6 { grid-column: 3; grid-row: 2; }
+        .btn-mult { grid-column: 4; grid-row: 2; }
+        .btn-delete { grid-column: 5; grid-row: 2; }
+
+        .btn-7 { grid-column: 1; grid-row: 3; }
+        .btn-8 { grid-column: 2; grid-row: 3; }
+        .btn-9 { grid-column: 3; grid-row: 3; }
+        .btn-sub { grid-column: 4; grid-row: 3; }
+        .btn-add { grid-column: 5; grid-row: 3; }
+
+        .btn-decimal { grid-column: 1; grid-row: 4; }
+        .btn-0 { grid-column: 2; grid-row: 4; }
+        .btn-back { grid-column: 3; grid-row: 4; }
+        .btn-equals { grid-column: 4 / 6; grid-row: 4; border-radius: 26px; width: auto; }
+
+        /* Responsive Design for Mobile Devices */
+        @media (max-width: 480px) {
+            .calculator {
+                max-width: 100%;
+                padding: 16px;
+            }
+
+            .display {
+                padding: 25px 15px;
+                min-height: 70px;
+            }
+
+            .expression {
+                font-size: 14px;
+            }
+
+            .result {
+                font-size: 30px;
+            }
+
+            button {
+                font-size: 18px;
+                width: 48px;
+                height: 48px;
+            }
+
+            .buttons {
+                gap: 10px;
+            }
+        }
+
+        /* Extra Small Devices */
+        @media (max-width: 360px) {
+            .display {
+                padding: 20px 12px;
+            }
+
+            .result {
+                font-size: 26px;
+            }
+
+            button {
+                font-size: 16px;
+                width: 44px;
+                height: 44px;
+            }
+
+            .buttons {
+                gap: 8px;
+            }
+        }
+
+        /* Tablet and Larger Devices */
+        @media (min-width: 768px) {
+            .calculator {
+                max-width: 380px;
+            }
+
+            button {
+                width: 58px;
+                height: 58px;
+                font-size: 22px;
+            }
+        }
