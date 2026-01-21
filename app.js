@@ -64,6 +64,9 @@ const calculateResult = () => {
         case '÷':
             res = num1 / num2;
             break;
+        case '^':
+            res = Math.pow(num1, num2);
+            break;
         default:
             res = 'Invalid';
     }
