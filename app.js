@@ -13,14 +13,19 @@ let operator = '';
 let res = 0;
 let isSecondOperand = false;
 
+const operandVerifier = (value) => {
+  if (!isSecondOperand) {
+    firstOperand += value;
+  } else {
+    secondOperand += value;
+  }
+  displayExpression();
+};
+
+
 numBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        if(!isSecondOperand) {
-            firstOperand += btn.textContent;
-            console.log(firstOperand);
-        } else {
-            secondOperand += btn.textContent;
-        }
+       operandVerifier(btn.textContent)
 
         displayExpression();
     })
@@ -38,6 +43,47 @@ opBtns.forEach(btn => {
         displayExpression();
     });
 });
+
+document.addEventListener("keydown", (e) => {
+  const key = e.key;
+
+  if (!isNaN(key) || key === ".") {
+    operandVerifier(key);
+  }
+
+  if (["+", "-", "*", "/"].includes(key)) {
+    if (firstOperand) {
+      operator = key === "*" ? "×" : key === "/" ? "÷" : key;
+      isSecondOperand = true;
+      displayExpression();
+    }
+  }
+
+  if (key === "Enter") {
+    if (firstOperand && secondOperand && operator) {
+      calculateResult();
+      result.textContent = res;
+    }
+  }
+
+  if (key === "Backspace") {
+    handleBackspace();
+  }
+});
+
+const handleBackspace = () => {
+  if (secondOperand) {
+    secondOperand = secondOperand.slice(0, -1);
+  } else if (operator) {
+    operator = '';
+    isSecondOperand = false;
+  } else if (firstOperand) {
+    firstOperand = firstOperand.slice(0, -1);
+  }
+  displayExpression();
+};
+
+
 
 
 
